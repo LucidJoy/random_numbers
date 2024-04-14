@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 app.get("/api/salt", (req, res) => {
-  const child = spawn("./index");
+  const child = spawn("./salt");
 
   child.stdout.on("data", (data) => {
     res.json(data.toString().trim());
