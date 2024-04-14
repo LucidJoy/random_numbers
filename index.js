@@ -18,7 +18,6 @@ app.get("/api/salt-hash", (req, res) => {
   child.on("close", (code) => {
     if (code !== 0) {
       console.error("Child process exited with code:", code);
-      res.status(500).send("Failed to generate random bytes");
     }
   });
 });
