@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 
 app.get("/api/random-bytes", (req, res) => {
-  const child = spawn("./entro_exec");
+  const child = spawn("./rand");
 
   child.stdout.on("data", (data) => {
     res.json(data.toString().trim());
@@ -26,6 +26,7 @@ app.get("/api/random-bytes", (req, res) => {
 app.get("/test", (req, res) => {
   return res.json({ message: "Joy" });
 });
+
 app.get("/", (req, res) => {
   return res.status(200).send({ message: "home route" });
 });

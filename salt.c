@@ -6,7 +6,7 @@ int main()
   unsigned char buffer[32];
   if (getentropy(buffer, sizeof(buffer)) == 0)
   {
-    printf("Random bytes: ");
+    printf("Salt: ");
     for (int i = 0; i < sizeof(buffer); i++)
     {
       printf("%02x", buffer[i]);
