@@ -3,7 +3,7 @@ const express = require("express");
 
 const app = express();
 
-app.get("/api/salt", (req, res) => {
+app.get("/api/salt-hash", (req, res) => {
   const child = spawn("./salt");
 
   child.stdout.on("data", (data) => {
