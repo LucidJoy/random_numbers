@@ -3,8 +3,8 @@ const express = require("express");
 
 const app = express();
 
-app.get("/api/random-bytes", (req, res) => {
-  const child = spawn("./rand");
+app.get("/api/salt", (req, res) => {
+  const child = spawn("./index");
 
   child.stdout.on("data", (data) => {
     res.json(data.toString().trim());
