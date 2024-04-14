@@ -23,4 +23,8 @@ app.get("/api/random-bytes", (req, res) => {
   });
 });
 
+app.get("/test", (req, res) => {
+  return res.json({ message: "Joy" });
+});
+
 app.listen(3000, () => console.log("Server listening on port 3000"));
